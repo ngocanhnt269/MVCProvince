@@ -22,6 +22,7 @@ public static class SampleData
     public static List<Province> GetProvinces()
     {
         List<Province> provinces = new List<Province>() {
+
             new Province() { ProvinceName="British Columbia", ProvinceCode="BC", Cities = new List<City>() },
             new Province() { ProvinceName="California", ProvinceCode="CA", Cities = new List<City>() },
             new Province() { ProvinceName="Alberta", ProvinceCode="AB", Cities = new List<City>() },

@@ -3,7 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MVC.Migrations
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace MVC.Data.Migrations
 {
     /// <inheritdoc />
     public partial class M1 : Migration
@@ -187,6 +189,32 @@ namespace MVC.Migrations
                         column: x => x.ProvinceCode1,
                         principalTable: "Province",
                         principalColumn: "ProvinceCode");
+                });
+
+            migrationBuilder.InsertData(
+                table: "City",
+                columns: new[] { "CityId", "CityName", "Population", "ProvinceCode", "ProvinceCode1" },
+                values: new object[,]
+                {
+                    { 1, "Vancouver", 675218, "BC", null },
+                    { 2, "Victoria", 344615, "BC", null },
+                    { 3, "Burnaby", 232755, "BC", null },
+                    { 4, "Surrey", 517887, "BC", null },
+                    { 5, "Richmond", 198309, "BC", null },
+                    { 6, "San Francisco", 883305, "CA", null }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Province",
+                columns: new[] { "ProvinceCode", "ProvinceName" },
+                values: new object[,]
+                {
+                    { "AB", "Alberta" },
+                    { "BC", "British Columbia" },
+                    { "CA", "California" },
+                    { "FL", "Florida" },
+                    { "IL", "Illinois" },
+                    { "ON", "Ontario" }
                 });
 
             migrationBuilder.CreateIndex(

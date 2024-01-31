@@ -10,11 +10,13 @@ namespace MVC.Models
     {
         [Key]
         [MaxLength(30)]
+        [Display(Name = "Province Code")]
         public string? ProvinceCode { get; set; }
+
         [Required]
+        [Display(Name = "Province")]
         public string? ProvinceName { get; set; }
 
         public List<City>? Cities { get; set; }
-
     }
 }

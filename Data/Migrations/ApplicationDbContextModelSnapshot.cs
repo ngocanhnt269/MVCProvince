@@ -3,19 +3,16 @@ using System;
 using MVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace MVC.Migrations
+namespace MVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240131184040_M1")]
-    partial class M1
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.1");
@@ -44,6 +41,50 @@ namespace MVC.Migrations
                     b.HasIndex("ProvinceCode1");
 
                     b.ToTable("City", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CityId = 1,
+                            CityName = "Vancouver",
+                            Population = 675218,
+                            ProvinceCode = "BC"
+                        },
+                        new
+                        {
+                            CityId = 2,
+                            CityName = "Victoria",
+                            Population = 344615,
+                            ProvinceCode = "BC"
+                        },
+                        new
+                        {
+                            CityId = 3,
+                            CityName = "Burnaby",
+                            Population = 232755,
+                            ProvinceCode = "BC"
+                        },
+                        new
+                        {
+                            CityId = 4,
+                            CityName = "Surrey",
+                            Population = 517887,
+                            ProvinceCode = "BC"
+                        },
+                        new
+                        {
+                            CityId = 5,
+                            CityName = "Richmond",
+                            Population = 198309,
+                            ProvinceCode = "BC"
+                        },
+                        new
+                        {
+                            CityId = 6,
+                            CityName = "San Francisco",
+                            Population = 883305,
+                            ProvinceCode = "CA"
+                        });
                 });
 
             modelBuilder.Entity("MVC.Models.Province", b =>
@@ -59,6 +100,38 @@ namespace MVC.Migrations
                     b.HasKey("ProvinceCode");
 
                     b.ToTable("Province", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ProvinceCode = "BC",
+                            ProvinceName = "British Columbia"
+                        },
+                        new
+                        {
+                            ProvinceCode = "CA",
+                            ProvinceName = "California"
+                        },
+                        new
+                        {
+                            ProvinceCode = "AB",
+                            ProvinceName = "Alberta"
+                        },
+                        new
+                        {
+                            ProvinceCode = "ON",
+                            ProvinceName = "Ontario"
+                        },
+                        new
+                        {
+                            ProvinceCode = "FL",
+                            ProvinceName = "Florida"
+                        },
+                        new
+                        {
+                            ProvinceCode = "IL",
+                            ProvinceName = "Illinois"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
