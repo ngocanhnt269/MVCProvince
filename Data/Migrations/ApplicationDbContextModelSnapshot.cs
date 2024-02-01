@@ -84,6 +84,41 @@ namespace MVC.Data.Migrations
                             CityName = "San Francisco",
                             Population = 883305,
                             ProvinceCode = "CA"
+                        },
+                        new
+                        {
+                            CityId = 7,
+                            CityName = "Los Angeles",
+                            Population = 39776830,
+                            ProvinceCode = "CA"
+                        },
+                        new
+                        {
+                            CityId = 8,
+                            CityName = "San Diego",
+                            Population = 3280469,
+                            ProvinceCode = "CA"
+                        },
+                        new
+                        {
+                            CityId = 9,
+                            CityName = "Calgary",
+                            Population = 1239220,
+                            ProvinceCode = "AB"
+                        },
+                        new
+                        {
+                            CityId = 10,
+                            CityName = "Edmonton",
+                            Population = 981280,
+                            ProvinceCode = "AB"
+                        },
+                        new
+                        {
+                            CityId = 11,
+                            CityName = "Red Deer",
+                            Population = 100418,
+                            ProvinceCode = "AB"
                         });
                 });
 

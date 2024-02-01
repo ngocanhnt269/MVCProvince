@@ -73,6 +73,37 @@ public static class SampleData
                 Population = 883305,
                 ProvinceCode = "CA"
             },
+            new City {
+                CityId = 7,
+                CityName = "Los Angeles",
+                Population = 39776830,
+                ProvinceCode = "CA"
+            },
+            new City {
+                CityId = 8,
+                CityName = "San Diego",
+                Population = 3280469,
+                ProvinceCode = "CA"
+            },
+            new City {
+                CityId = 9,
+                CityName = "Calgary",
+                Population = 1239220,
+                ProvinceCode = "AB"
+            },
+
+            new City {
+                CityId = 10,
+                CityName = "Edmonton",
+                Population = 981280,
+                ProvinceCode = "AB"
+            },
+            new City {
+                CityId = 11,
+                CityName = "Red Deer",
+                Population = 100418,
+                ProvinceCode = "AB"
+            },
         };
         return cities;
     }

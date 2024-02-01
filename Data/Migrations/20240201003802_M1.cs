@@ -201,7 +201,12 @@ namespace MVC.Data.Migrations
                     { 3, "Burnaby", 232755, "BC", null },
                     { 4, "Surrey", 517887, "BC", null },
                     { 5, "Richmond", 198309, "BC", null },
-                    { 6, "San Francisco", 883305, "CA", null }
+                    { 6, "San Francisco", 883305, "CA", null },
+                    { 7, "Los Angeles", 39776830, "CA", null },
+                    { 8, "San Diego", 3280469, "CA", null },
+                    { 9, "Calgary", 1239220, "AB", null },
+                    { 10, "Edmonton", 981280, "AB", null },
+                    { 11, "Red Deer", 100418, "AB", null }
                 });
 
             migrationBuilder.InsertData(
